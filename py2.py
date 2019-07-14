@@ -11,6 +11,6 @@ for char in ipaddr:
    seg_len=0
  else: 
    seg_len+=1
-
+   
 if char != '.': 
  print("segment {} contains {} characters".format(segment, seg_len))
