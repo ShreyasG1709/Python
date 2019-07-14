@@ -1,5 +1,6 @@
 ipaddr=input("Enter an IP Add")
 
+
 segment=1
 seg_len=0
 char=""
