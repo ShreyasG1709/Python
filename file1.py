@@ -32,3 +32,4 @@ with open("/Users/Shreyas/Desktop/file.txt",'r') as a:
 for line in lines:
  for char in line[::-1]:
   print(char, end='')
+  
