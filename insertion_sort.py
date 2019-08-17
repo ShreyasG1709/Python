@@ -13,3 +13,4 @@ nlist=[12,11,13,5,6]
 insort(nlist)
 
 print(nlist)
+
