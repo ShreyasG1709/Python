@@ -1,6 +1,8 @@
 
-@author: Shreyas
+@author: Shreyas 
 """
+
+HOTEL BILL
 
 a = ([80.0, 130.0, 100.0, 80.0, 90.0, 110.0, 120.0, 140.0, 70.0, 80.0]) 
 tot = 0
