@@ -1,0 +1,11 @@
+def count_substring(string, sub_string):
+    count = 0
+    start_index = 0
+
+    while True:           //find till last char of the string
+        index = string.find(sub_string, start_index)
+        if index == -1:   //if index output is none
+            break
+        count += 1        //if substring found
+        start_index = index + 1
+    return count
