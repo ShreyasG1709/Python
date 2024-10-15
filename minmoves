@@ -1,0 +1,21 @@
+def minimumMoves(arr1, arr2):
+    total_moves = 0
+    
+    for num1, num2 in zip(arr1, arr2):
+        str1, str2 = str(num1), str(num2)
+        
+        # Ensure the numbers have the same length by padding with zeros if necessary
+        max_len = max(len(str1), len(str2))
+        str1 = str1.zfill(max_len)
+        str2 = str2.zfill(max_len)
+        
+        for digit1, digit2 in zip(str1, str2):
+            total_moves += abs(int(digit1) - int(digit2))
+    
+    return total_moves
+
+# Example usage
+arr1 = [123, 543]
+arr2 = [321, 279]
+result = minimumMoves(arr1, arr2)
+print(result)  # Expected output: 16
