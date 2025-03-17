@@ -1,0 +1,32 @@
+from itertools import permutations
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def get_permutations(num):
+    str_num = str(num)
+    return set(int("".join(p)) for p in permutations(str_num))
+
+def is_circular_prime(num):
+    perms = get_permutations(num)
+    return all(is_prime(p) for p in perms)
+
+# Taking input
+num = int(input("Enter a number: "))
+
+# Generating permutations and checking for circular prime
+permutations_list = get_permutations(num)
+print("Generated permutations:", permutations_list)
+
+prime_permutations = [p for p in permutations_list if is_prime(p)]
+print("Prime permutations:", prime_permutations)
+
+if is_circular_prime(num):
+    print(f"{num} is a Circular Prime Number.")
+else:
+    print(f"{num} is NOT a Circular Prime Number.")
